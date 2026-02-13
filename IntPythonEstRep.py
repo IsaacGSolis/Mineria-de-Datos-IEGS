@@ -1,4 +1,4 @@
-#Ejercicio 1
+
 suma=0
 N=int(input("Ingresa un numero: "))
 for i in range(1,N+1):
