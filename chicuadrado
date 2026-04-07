@@ -1,0 +1,53 @@
+import numpy as np
+from scipy import stats
+#Ejercicio 1
+#Tabla de frecuencias observadas
+tabla=np.array([[85,65],[50,100]])
+#Realiza la prueba de chi-cuadrado de independencia stats.chi2_contingency devuelve el estadistico chi-cuadrado, el p-value, los grados de libertad y las frecuencias esperadas
+chi2,p_value,gl,esperados=stats.chi2_contingency(tabla,correction=False)
+#Imprime resultados
+print("Ejercicio 1")
+print(f"Chi-cuadrado={chi2:.4f}")
+print(f"p-value={p_value:.4f}")
+print(f"Grados de libertad={gl}")
+print("Frecuencias esperadas:")
+print(esperados)
+alpha=0.05
+if p_value < alpha:
+    print("Hay evidencia suficiente para determinar que la preferencia de transporte depende de la ciudad.")
+else:
+    print("No hay evidencia suficiente para determinar que la preferencia de transporte depende de la ciudad.")
+#Ejercicio 2
+#Tabla de frecuencias observadas
+tabla=np.array([[40,20],[35,45],[15,45]])
+#Realiza la prueba de chi-cuadrado de independencia stats.chi2_contingency devuelve el estadistico chi-cuadrado, el p-value, los grados de libertad y las frecuencias esperadas
+chi2,p_value,gl,esperados=stats.chi2_contingency(tabla,correction=False)
+#Imprime resultados
+print("Ejercicio 2")
+print(f"Chi-cuadrado={chi2:.4f}")
+print(f"p-value={p_value:.4f}")
+print(f"Grados de libertad={gl}")
+print("Frecuencias esperadas:")
+print(esperados)
+alpha=0.05
+if p_value < alpha:
+    print("Hay evidencia suficiente para determinar que el nivel educativo está relacionado con el hábito de fumar.")
+else:
+    print("No hay evidencia suficiente para determinar que el nivel educativo está relacionado con el hábito de fumar.")
+#Ejercicio 3
+#Tabla de frecuencias observadas
+tabla=np.array([[10,50],[30,40],[45,5]])
+#Realiza la prueba de chi-cuadrado de independencia stats.chi2_contingency devuelve el estadistico chi-cuadrado, el p-value, los grados de libertad y las frecuencias esperadas
+chi2,p_value,gl,esperados=stats.chi2_contingency(tabla,correction=False)
+#Imprime resultados
+print("Ejercicio 3")
+print(f"Chi-cuadrado={chi2:.4f}")
+print(f"p-value={p_value:.4f}")
+print(f"Grados de libertad={gl}")
+print("Frecuencias esperadas:")
+print(esperados)
+alpha=0.05
+if p_value < alpha:
+    print("Hay evidencia suficiente para determinar que el tipo de dieta está relacionado con el nivel de colesterol.")
+else:
+    print("No hay evidencia suficiente para determinar que el tipo de dieta está relacionado con el nivel de colesterol.")
